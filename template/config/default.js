@@ -3,6 +3,7 @@
  *
  * @author  Alexander Jung <alexander@jung.net>
  */
+'use strict'
 
 const path = require('path')
 const _ = (x) => path.resolve(__dirname, '../', x)
@@ -106,7 +107,7 @@ config.webpack.module = {}
 // Extension processing rules
 // https://webpack.js.org/configuration/module/#rule
 config.webpack.module.rules = [
-  
+
   {{#lint}}
   // eslint-loader
   // https://github.com/MoOx/eslint-loader

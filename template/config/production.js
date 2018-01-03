@@ -4,6 +4,8 @@
  * @author  Alexander Jung <alexander@jung.net>
  */
 
+'use strict'
+
 var path = require('path')
 var webpack = require('webpack')
 var merge = require('webpack-merge')

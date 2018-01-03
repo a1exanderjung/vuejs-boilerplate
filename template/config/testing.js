@@ -4,6 +4,8 @@
  * @author  Alexander Jung <alexander@jung.net>
  */
 
+'use strict'
+
 var merge = require('webpack-merge')
 var _default = requrie('./default')
 var config = {}
