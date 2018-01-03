@@ -1,18 +1,9 @@
-/*
- * Highly opinionated VueJS boilerplate ({{ template_version }})
- *
- * @author  Alexander Jung <alexander@jung.net>
- */
-
-'use strict'
-
 {{#if_eq build "standalone"}}
 // The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in config/default.js with an alias.
-
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
 import Vue from 'vue'
-import app from './app'
+import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
@@ -26,10 +17,10 @@ new Vue({
   router,
   {{/router}}
   {{#if_eq build "runtime"}}
-  render: h => h(app)
+  render: h => h(App)
   {{/if_eq}}
   {{#if_eq build "standalone"}}
-  components: { app },
-  template: '<app/>'
+  components: { App },
+  template: '<App/>'
   {{/if_eq}}
 })
