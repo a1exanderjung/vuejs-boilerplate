@@ -3,6 +3,7 @@
  *
  * @author  Alexander Jung <alexander@jung.net>
  */
+
 'use strict'
 
 const path = require('path')
@@ -136,11 +137,11 @@ config.webpack.module.rules = [
   // url-loader
   // https://github.com/webpack-contrib/url-loader
   {
-    test: /\.(png|jpe?g|gif)(\?.*)?$/,
-    loader: 'url-loader',
+    test: /\.(svg|png|jpe?g|gif)(\?.*)?$/,
+    loader: 'file-loader',
     query: {
-      limit: 10000,
-      name: path.join(config.paths.assets, 'img/[name].[hash:7].[ext]')
+      emitFile: false,
+      name: 'static/assets/img/[name].[hash:7].[ext]'
     }
   },
   {
@@ -148,7 +149,7 @@ config.webpack.module.rules = [
     loader: 'url-loader',
     options: {
       limit: 10000,
-      name: path.join(config.paths.assets, 'media/[name].[hash:7].[ext]')
+      name: path.resolve(config.paths.public, 'media/[name].[hash:7].[ext]')
     }
   },
   {
@@ -156,7 +157,7 @@ config.webpack.module.rules = [
     loader: 'url-loader',
     query: {
       limit: 10000,
-      name: path.join(config.paths.assets, 'fonts/[name].[hash:7].[ext]')
+      name: path.resolve(config.paths.public, 'fonts/[name].[hash:7].[ext]')
     }
   }
 ]
