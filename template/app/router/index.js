@@ -1,3 +1,11 @@
+/*
+ * Highly opinionated VueJS boilerplate ({{ template_version }})
+ *
+ * @author  Alexander Jung <alexander@jung.net>
+ */
+
+'use strict'
+
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '~/components/HelloWorld'
