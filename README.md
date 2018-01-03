@@ -1,8 +1,49 @@
-# vue-webpack-boilerplate
+# Opinionated vuejs-boilerplate
+
+Originally forked from [`vuejs-templates/webpack`](http://github.com/vuejs-templates/webpack).
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
 > This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+
+## Differences
+
+This project follows a different directory structure, a number of re-organisations, better inline commenting for a more straightforward approach to building a vuejs-based application.
+
+Significant changes are to do with the organisation of `webpack` configuration inside the `config/` folder.  Below is a tree of the directory structure once the boilerplate has been installed.
+
+Additionally, `src/` has been renamed to `app/` and `index.html` has been moved into this folder.
+
+```
+.
+├── app/
+│   ├── app.vue
+│   ├── assets/
+│   ├── components/
+│   ├── index.html
+│   ├── main.js
+│   └── router/
+├── bin/
+│   ├── build.js
+│   ├── check.js
+│   ├── hot.js
+│   ├── test.js
+│   └── www.js
+├── config/
+│   ├── default.js
+│   ├── development.js
+│   ├── index.js
+│   ├── production.js
+│   ├── staging.js
+│   └── testing.js
+├── node_modules/
+├── package.json
+├── README.md
+├── static/
+├── tests/
+└── tools/
+
+```
 
 ## Documentation
 
@@ -15,10 +56,10 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init a1exanderjung/vuejs-boilerplate my-project
 $ cd my-project
 $ npm install
-$ npm run dev
+$ npm run hot
 ```
 
 This will scaffold the project using the `master` branch. If you wish to use the latest version of the webpack template, do the following instead:
